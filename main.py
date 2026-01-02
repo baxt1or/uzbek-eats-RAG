@@ -5,11 +5,27 @@ from vector import retriever
 model = OllamaLLM(model="phi3:mini")
 
 template = """ 
-You are an expert responding restaurant reviews and reviews are in English, but you need to answer briefly in Russian
 
-Here are the relevant reviews: {reviews}
+You are an expert assistant analyzing restaurant reviews written in Uzbek.
 
-Here is the question to answer: {question}
+Your task:
+1. Use ONLY the provided reviews.
+2. Answer the user's question briefly and clearly.
+3. First, provide recommendations in Uzbek.
+4. Then, provide the same recommendations in Russian.
+5. Do NOT add information that is not supported by the reviews.
+
+Formatting rules:
+- Uzbek response first
+- Russian response second
+- Use short bullet points if possible
+- Be concise and practical
+
+Relevant reviews (Uzbek):
+{reviews}
+
+User question:
+{question}
 
 """
 

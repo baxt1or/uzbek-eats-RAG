@@ -1,4 +1,4 @@
-#!/Users/baxtiyorbekmurodov/Desktop/RAG-TUTORIAL/venv/bin/python3.11
+#!/Users/baxtiyorbekmurodov/Desktop/uzbek-eats-RAG/venv/bin/python3.11
 import sys
 from rsa.cli import encrypt
 if __name__ == '__main__':
